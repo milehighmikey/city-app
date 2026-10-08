@@ -1,0 +1,7 @@
+const paths = { arrow: 'M4 12h16m-6-6 6 6-6 6', search: 'm16 16 5 5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0', card: 'M3 5h18v14H3zM3 9h18M6 15h4', trash: 'M3 6h18M9 6V3h6v3M6 6l1 15h10l1-15M10 10v7m4-7v7', file: 'M6 2h8l5 5v15H6zM14 2v6h5M9 12h7m-7 4h7', alert: 'M12 3 2 21h20L12 3zM12 9v5m0 3v1', tree: 'm12 2-6 7h3l-5 6h5l-4 4h14l-4-4h5l-5-6h3L12 2zM12 19v4', building: 'm2 8 10-5 10 5H2zM4 21h16M6 10v8m6-8v8m6-8v8', road: 'M8 2 3 22M16 2l5 20M12 3v3m0 4v4m0 4v4', water: 'M12 2S4 12 4 16a8 8 0 0 0 16 0c0-4-8-14-8-14z', sun: 'M12 1v2m0 18v2M1 12h2m18 0h2M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2M18 12a6 6 0 1 1-12 0 6 6 0 0 1 12 0', pin: 'M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0zM15 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0', clock: 'M12 6v6l4 3M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0' } as const;
+export type IconName = keyof typeof paths;
+export function Icon({ name, size = 24 }: {
+    name: IconName;
+    size?: number;
+}) { return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={paths[name]}/></svg>; }
+export function TreeMark() { return <svg width="47" height="55" viewBox="0 0 48 58" fill="currentColor" aria-hidden="true"><path d="M22 55h4V22h-4zM9 55h30v2H9z"/>{[0, 1, 2, 3].map(row => <g key={row} transform={`translate(24 ${12 + row * 9})`}><path d="M0 8C-12 8-17 1-15-5-7-5-1 0 0 8Z"/><path d="M0 8C12 8 17 1 15-5 7-5 1 0 0 8Z"/></g>)}<path d="M24 17c-8-7-5-13 0-17 5 4 8 10 0 17Z"/></svg>; }
