@@ -1,0 +1,1120 @@
+.page {
+  background: linear-gradient(135deg, #fffefa, #f7f2e8);
+}
+
+.serviceOverview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 40px;
+  padding-block: 40px;
+}
+
+/* Scope the existing finder to T2. Its component and homepage CSS stay intact. */
+.finder {
+  min-width: 0;
+}
+
+.finder > section {
+  width: 100%;
+  padding: 0;
+}
+
+.finder > section > div:first-child {
+  display: block;
+}
+
+.finder h2 {
+  margin: 0 0 16px;
+  font-size: 32px;
+  letter-spacing: -0.8px;
+}
+
+.finder form {
+  min-width: 0;
+  gap: 16px;
+  padding-left: 16px;
+}
+
+.finder input {
+  min-height: 48px;
+  padding-block: 8px;
+  font-size: 13px;
+}
+
+.finder form button {
+  width: 48px;
+}
+
+/* The final child is the finder's results grid. Keep filtered counts natural. */
+.finder > section > div:last-child {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.finder details {
+  grid-column: span 2;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.finder details:nth-child(n + 4) {
+  grid-column: span 3;
+}
+
+.finder details[open] {
+  grid-column: 1 / -1;
+}
+
+.finder details summary {
+  display: flex;
+  min-height: 96px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 24px;
+}
+
+.finder details summary > svg {
+  margin: 0;
+}
+
+.finder details summary > span:first-of-type {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.finder details small {
+  display: none;
+}
+
+.finder details summary > span:last-child {
+  top: 50%;
+  right: 8px;
+  margin-top: -8px;
+  color: var(--ink);
+  font-size: 16px;
+}
+
+.finder details:hover {
+  background: #e8ede45c;
+}
+
+.finder details p {
+  padding: 0 24px 24px;
+  font-size: 13px;
+}
+
+.pulse {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+  color: white;
+  background: linear-gradient(135deg, var(--green), #012f2c);
+}
+
+.pulseHeading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+}
+
+.pulseHeading h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sampleBadge {
+  padding: 4px 8px;
+  border: 1px solid #7ca891;
+  color: #e2eee5;
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+.pulse > p {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.pulse > .sampleNote {
+  margin-top: 4px;
+  color: #c5d6cb;
+  font-size: 10px;
+}
+
+.statusGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 16px;
+  border-top: 1px solid #59786b;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  min-height: 72px;
+  margin-block: 8px;
+  padding-inline: 8px;
+  border-left: 1px solid #59786b;
+}
+
+.status:nth-child(3n + 1) {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.status > svg {
+  flex-shrink: 0;
+}
+
+.status:first-child > svg {
+  color: #ffcc52;
+}
+
+.status:last-child > svg {
+  color: #ff8b55;
+}
+
+.status span {
+  font-size: 12px;
+}
+
+.status p {
+  margin-top: 4px;
+  color: #e2eee5;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.pulseMore {
+  border-top: 1px solid #59786b;
+}
+
+.pulseMore summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 48px;
+  padding-top: 8px;
+  list-style: none;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.pulseMore > p {
+  padding-top: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.editorial {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 40px;
+  padding-block: 8px 40px;
+}
+
+.popular,
+.news,
+.programs,
+.events {
+  min-width: 0;
+}
+
+.popularList {
+  display: grid;
+  gap: 8px;
+}
+
+.serviceRow {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.serviceRow summary {
+  display: grid;
+  grid-template-columns: 56px 1fr 16px;
+  align-items: center;
+  gap: 16px;
+  padding-right: 16px;
+  list-style: none;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.serviceIcon {
+  display: grid;
+  place-items: center;
+  align-self: stretch;
+  min-height: 56px;
+  color: var(--green);
+  background: #e7ebe1;
+}
+
+.serviceRow > p {
+  padding: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.directory {
+  margin-top: 16px;
+  scroll-margin-top: 24px;
+}
+
+.directory summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 44px;
+  list-style: none;
+  font-size: 12px;
+}
+
+.directory ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.directory li {
+  padding-block: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.directory li > p {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.newsGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.leadImage,
+.storyImage,
+.programImage,
+.parkImage {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.leadImage {
+  aspect-ratio: 1.6;
+}
+
+.newsMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-block: 8px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.newsMeta span {
+  color: var(--orange);
+}
+
+.leadStory h3 {
+  font-size: 25px;
+  line-height: 1.12;
+}
+
+.leadStory > p:last-of-type {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.storyDetails {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.storyDetails summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 44px;
+  list-style: none;
+}
+
+.storyDetails > p {
+  color: var(--muted);
+}
+
+.supportingStory + .supportingStory {
+  padding-top: 16px;
+  margin-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.supportingStory summary {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) 16px;
+  align-items: start;
+  gap: 12px;
+  list-style: none;
+}
+
+.supportingStory summary > svg {
+  align-self: center;
+}
+
+.storyImage {
+  height: 80px;
+}
+
+.supportingStory time {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.storyTitle {
+  display: block;
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.12;
+}
+
+.storyDescription {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.supportingStory > p {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.programsContainer {
+  padding-block: 32px 40px;
+  border-top: 1px solid var(--line);
+}
+
+.programGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+  gap: 8px;
+}
+
+.program {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  scroll-margin-top: 32px;
+}
+
+.program summary {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 16px;
+  gap: 12px;
+  align-items: center;
+  min-height: 80px;
+  padding-right: 12px;
+  list-style: none;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.programImage {
+  height: 80px;
+  align-self: stretch;
+  border-radius: 3px 0 0 3px;
+}
+
+.programDetails {
+  padding: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+}
+
+.programDetails p + p {
+  margin-top: 8px;
+}
+
+.parksContainer {
+  padding-bottom: 40px;
+}
+
+.parks {
+  background: #f8f6ee;
+}
+
+.parksBanner {
+  position: relative;
+  isolation: isolate;
+  min-height: 320px;
+}
+
+.parksPhoto {
+  position: absolute;
+  inset: 0 0 0 32%;
+  z-index: -2;
+}
+
+.parksPhoto img {
+  object-position: center 60%;
+}
+
+.parksBanner::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background: linear-gradient(90deg, #f8f6ee 28%, #f8f6eef2 40%, #f8f6ee00 72%);
+}
+
+.parksIntro {
+  width: 48%;
+  padding: 32px;
+}
+
+.parksIntro h2 {
+  font-size: 40px;
+  letter-spacing: -1px;
+}
+
+.parksIntro > p {
+  max-width: 360px;
+  margin-block: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.parkList {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+  gap: 16px;
+  padding: 16px 32px 0;
+  scroll-margin-top: 24px;
+}
+
+.park summary {
+  list-style: none;
+}
+
+.parkImage {
+  height: 120px;
+  margin-bottom: 8px;
+}
+
+.parkName {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.parkDescription {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.park > p {
+  padding-top: 12px;
+  font-size: 12px;
+}
+
+.allParks {
+  padding: 8px 32px;
+}
+
+.allParks a {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.eventsContainer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.event {
+  border-top: 1px solid var(--line);
+}
+
+.event summary {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) 16px;
+  align-items: center;
+  gap: 24px;
+  padding-block: 16px;
+  list-style: none;
+}
+
+.event time {
+  display: block;
+  padding-right: 16px;
+  border-right: 1px solid var(--line);
+  color: var(--orange);
+  font-family: var(--serif);
+  font-size: 40px;
+  line-height: 1;
+  text-align: center;
+}
+
+.event time > span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.eventCopy strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.eventCopy > span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.event > p {
+  padding-bottom: 16px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.movie {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  min-height: 432px;
+  color: white;
+  background: var(--navy);
+}
+
+.movieImage {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+/* A deliberate image slot, not an unrelated stand-in photograph. */
+.movieImage > [role="img"] {
+  justify-content: flex-start;
+  padding-top: 40px;
+  color: #abc2b6;
+  background: linear-gradient(135deg, #17473c, #061f2a);
+}
+
+.movie::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background: linear-gradient(0deg, #001715ed, #00171580 50%, transparent);
+}
+
+.movieContent {
+  width: 100%;
+  padding: 32px;
+}
+
+.movieContent h2 {
+  margin-top: 8px;
+  font-size: 36px;
+  letter-spacing: -0.8px;
+}
+
+.movieContent > p:not(:first-child) {
+  max-width: 440px;
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.movieDetails {
+  margin-top: 16px;
+}
+
+.movieDetails summary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid #ffffffb3;
+  list-style: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.movieDetails > div {
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+.movieDetails p + p {
+  margin-top: 8px;
+}
+
+.involvedContainer {
+  padding-bottom: 40px;
+}
+
+.involved {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 48px;
+  color: white;
+  background: linear-gradient(120deg, #a63613, #bd431d);
+}
+
+.involvedCopy {
+  position: relative;
+  z-index: 1;
+}
+
+.involved h2 {
+  margin-top: 16px;
+  font-size: 40px;
+  letter-spacing: -0.8px;
+}
+
+.involvedCopy > p:not(:first-child) {
+  max-width: 440px;
+  margin-block: 16px 24px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.watermark {
+  position: absolute;
+  right: 16px;
+  bottom: -48px;
+  opacity: 0.12;
+  transform: rotate(-12deg);
+  pointer-events: none;
+}
+
+.watermark svg {
+  width: 320px;
+  height: 384px;
+}
+
+.page summary::-webkit-details-marker {
+  display: none;
+}
+
+.page summary:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.page details[open] > summary > svg:last-child {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 1000px) {
+  .serviceOverview {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding-block: 32px;
+  }
+
+  .finder > section > div:last-child {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .finder details,
+  .finder details:nth-child(n + 4) {
+    grid-column: span 1;
+  }
+
+  .finder details[open] {
+    grid-column: 1 / -1;
+  }
+
+  .statusGrid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .status:nth-child(4) {
+    padding-left: 8px;
+    border-left: 1px solid #59786b;
+  }
+
+  .status {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-inline: 16px;
+  }
+
+  .editorial {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding-bottom: 32px;
+  }
+
+  .popularList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .programGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .parksIntro {
+    width: 60%;
+  }
+
+  .eventsContainer {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .movie {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 700px) {
+  .serviceOverview {
+    width: 100%;
+    gap: 0;
+    padding-block: 0;
+  }
+
+  .finder {
+    padding: 24px 20px;
+  }
+
+  .finder h2 {
+    font-size: 28px;
+  }
+
+  .finder > section > div:last-child {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .finder details {
+    grid-column: span 2;
+  }
+
+  .finder details:nth-child(n + 4) {
+    grid-column: span 3;
+  }
+
+  .finder details[open] {
+    grid-column: 1 / -1;
+  }
+
+  .finder details summary {
+    min-height: 96px;
+    padding: 12px 20px 12px 8px;
+  }
+
+  .pulse {
+    padding: 24px 20px 16px;
+  }
+
+  .statusGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .status {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    min-height: 64px;
+    margin-block: 4px;
+    padding-inline: 8px;
+  }
+
+  .status:nth-child(4) {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .status > svg {
+    width: 28px;
+  }
+
+  .status span {
+    font-size: 11px;
+  }
+
+  .editorial {
+    gap: 32px;
+    padding-block: 24px;
+  }
+
+  .popularList {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .newsGrid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .leadStory h3 {
+    font-size: 22px;
+  }
+
+  .supportingStory summary {
+    grid-template-columns: 56px minmax(0, 1fr) 12px;
+    gap: 8px;
+  }
+
+  .storyImage {
+    height: 64px;
+  }
+
+  .storyTitle {
+    font-size: 17px;
+  }
+
+  .storyDescription {
+    font-size: 11px;
+  }
+
+  .programsContainer {
+    padding-block: 24px;
+  }
+
+  .program summary {
+    grid-template-columns: 48px minmax(0, 1fr) 12px;
+    gap: 8px;
+    min-height: 72px;
+    padding-right: 8px;
+    font-size: 11px;
+  }
+
+  .programImage {
+    height: 72px;
+  }
+
+  .program summary > svg {
+    width: 12px;
+  }
+
+  .parksContainer {
+    width: 100%;
+    padding-bottom: 24px;
+  }
+
+  .parksBanner {
+    min-height: 280px;
+  }
+
+  .parksPhoto {
+    left: 24%;
+  }
+
+  .parksBanner::after {
+    background: linear-gradient(90deg, #f8f6ee 18%, #f8f6eef2 42%, #f8f6ee00 88%);
+  }
+
+  .parksIntro {
+    width: 72%;
+    padding: 24px 20px;
+  }
+
+  .parksIntro h2 {
+    font-size: 32px;
+  }
+
+  .parksIntro > p {
+    margin-block: 12px;
+    font-size: 13px;
+  }
+
+  .parkList {
+    gap: 8px;
+    padding: 12px 20px 0;
+  }
+
+  .parkImage {
+    height: 64px;
+  }
+
+  .parkName {
+    font-size: 11px;
+  }
+
+  .parkDescription {
+    font-size: 10px;
+  }
+
+  .park > p {
+    font-size: 11px;
+  }
+
+  .allParks {
+    padding: 8px 20px;
+  }
+
+  .eventsContainer {
+    width: 100%;
+    gap: 24px;
+    padding-bottom: 0;
+  }
+
+  .events {
+    padding-inline: 20px;
+  }
+
+  .event summary {
+    grid-template-columns: 64px minmax(0, 1fr) 16px;
+    gap: 16px;
+    padding-block: 16px;
+  }
+
+  .movie {
+    min-height: 384px;
+  }
+
+  .movieContent {
+    padding: 24px 20px;
+  }
+
+  .movieContent h2 {
+    font-size: 32px;
+  }
+
+  .involvedContainer {
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .involved {
+    padding: 32px 20px 48px;
+  }
+
+  .involved h2 {
+    font-size: 32px;
+  }
+
+  .watermark {
+    right: -80px;
+  }
+}
+
+@media (max-width: 550px) {
+  .newsGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .leadImage {
+    aspect-ratio: 1.8;
+  }
+
+  .supportingStory summary {
+    grid-template-columns: 80px minmax(0, 1fr) 16px;
+    gap: 16px;
+  }
+
+  .storyImage {
+    height: 80px;
+  }
+
+  .storyTitle {
+    font-size: 20px;
+  }
+
+  .storyDescription {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .status {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .program summary {
+    grid-template-columns: 32px minmax(0, 1fr) 12px;
+    gap: 4px;
+    font-size: 10px;
+  }
+
+  .programImage > [role="img"] > span {
+    display: none;
+  }
+
+  .parksIntro {
+    width: 86%;
+  }
+
+  .parkList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .serviceOverview,
+  .editorial,
+  .programsContainer,
+  .parksContainer,
+  .eventsContainer,
+  .involvedContainer {
+    max-width: 2480px;
+  }
+
+  .serviceOverview,
+  .editorial,
+  .programsContainer,
+  .parksContainer,
+  .eventsContainer,
+  .involvedContainer {
+    zoom: 1.2;
+  }
+}
+

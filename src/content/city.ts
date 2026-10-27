@@ -1,6 +1,27 @@
 // Municipality configuration and typed sample content, independent of presentation.
 export const city = { name: 'Brookhaven', state: 'Illinois', tagline: 'River roots. Strong neighbors. Bright tomorrows.', address: '301 S. Main Street', postal: 'Brookhaven, Illinois', hours: 'Monday–Friday, 8:00 AM–4:30 PM', isDemo: true } as const;
-export const navigation = [{ label: 'Residents', href: '/#services' }, { label: 'Government', href: '/#government' }, { label: 'Community', href: '/#community' }, { label: 'Business', href: '/#business' }, { label: 'Explore', href: '/#parks' }];
+export const navigation = [
+    {
+        label: 'Residents',
+        href: '/residents',
+    },
+    {
+        label: 'Government',
+        href: '/#government',
+    },
+    {
+        label: 'Community',
+        href: '/#community',
+    },
+    {
+        label: 'Business',
+        href: '/#business',
+    },
+    {
+        label: 'Explore',
+        href: '/#parks',
+    },
+];
 export type Service = {
     id: string;
     title: string;

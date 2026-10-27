@@ -1,0 +1,328 @@
+.page {
+  background: linear-gradient(135deg, #fffefa, #f7f2e8);
+}
+
+.composition {
+  padding-bottom: 56px;
+}
+
+.intro {
+  padding-block: 24px 32px;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+}
+
+.introGrid h1 {
+  margin-top: 12px;
+  font-size: clamp(40px, 4.5vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -1.6px;
+}
+
+.accent {
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin-block: 20px 16px;
+  background: var(--orange);
+}
+
+.introCopy {
+  max-width: 600px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.cityHall {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding-block: 24px;
+  padding-left: 32px;
+  border-left: 1px solid var(--line);
+  color: var(--green);
+}
+
+.cityHall > svg {
+  flex-shrink: 0;
+}
+
+.cityHall p:not(:first-child) {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.demoNote {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.featured {
+  padding-block: 8px 40px;
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.sectionHeading h2 {
+  font-size: 28px;
+  letter-spacing: -0.4px;
+}
+
+.sectionHeading p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.featuredGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.featuredDepartment {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  border-left: 1px solid var(--line);
+}
+
+.featuredDepartment:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.featuredDepartment > svg {
+  flex-shrink: 0;
+  color: var(--green);
+}
+
+.featuredDepartment h3 {
+  font-size: 23px;
+}
+
+.featuredDepartment p {
+  max-width: 38ch;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.featuredDepartment a {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 44px;
+  margin-top: 8px;
+  color: var(--green);
+  font-size: 12px;
+}
+
+.assistance {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  overflow: hidden;
+  margin-top: 48px;
+  padding: 40px;
+  color: white;
+  background: var(--green);
+}
+
+.assistance h2 {
+  margin-top: 12px;
+  font-size: 36px;
+  letter-spacing: -0.8px;
+}
+
+.assistance p:last-child {
+  max-width: 48ch;
+  margin-top: 12px;
+  color: #e4ece6;
+  font-size: 15px;
+}
+
+.finderLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-shrink: 0;
+  min-height: 48px;
+  padding: 12px 16px;
+  border: 1px solid #ccdcd0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.finderLink > svg {
+  flex-shrink: 0;
+}
+
+.finderLink:hover {
+  background: #ffffff14;
+  text-decoration: none;
+}
+
+.watermark {
+  position: absolute;
+  right: 16px;
+  bottom: -40px;
+  z-index: -1;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.watermark svg {
+  width: 240px;
+  height: 280px;
+}
+
+@media (max-width: 1000px) {
+  .introGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .cityHall {
+    padding: 16px 0 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .cityHall > svg {
+    width: 32px;
+    height: 40px;
+  }
+
+  .featuredDepartment {
+    flex-direction: column;
+    padding: 24px 16px;
+  }
+
+  .assistance {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 700px) {
+  .composition {
+    padding-bottom: 32px;
+  }
+
+  .intro {
+    padding-block: 24px;
+  }
+
+  .breadcrumb {
+    margin-bottom: 24px;
+    font-size: 11px;
+  }
+
+  .introGrid h1 {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .introCopy {
+    font-size: 15px;
+  }
+
+  .cityHall {
+    display: none;
+  }
+
+  .demoNote {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .sectionHeading {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .sectionHeading h2 {
+    font-size: 27px;
+  }
+
+  .sectionHeading p {
+    margin-top: 8px;
+  }
+
+  .featuredGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .featuredDepartment,
+  .featuredDepartment:first-child {
+    flex-direction: row;
+    padding: 24px 0;
+    border-left: 0;
+  }
+
+  .featuredDepartment + .featuredDepartment {
+    border-top: 1px solid var(--line);
+  }
+
+  .featuredDepartment h3 {
+    font-size: 24px;
+  }
+
+  .featuredDepartment p {
+    font-size: 14px;
+  }
+
+  .featured {
+    padding-bottom: 32px;
+  }
+
+  .assistance {
+    margin-top: 32px;
+    padding: 24px;
+  }
+
+  .assistance h2 {
+    font-size: 32px;
+  }
+
+  .finderLink {
+    width: 100%;
+    gap: 16px;
+  }
+}
+
+/* Match the approved Residents composition scale; never affect other routes. */
+@media (min-width: 1920px) {
+  .composition {
+    max-width: 2480px;
+    zoom: 1.2;
+  }
+}
